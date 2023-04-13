@@ -1,0 +1,44 @@
+@use "../../utilities/_colors" as *;
+@use "../../base/_fonts" as *;
+@use "../../utilities/functions" as f;
+
+.container {
+  padding: f.toRem(24);
+  display: flex;
+  flex-direction: column;
+  gap: f.toRem(24);
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    background-color: $yellow;
+    color: $white;
+    font-family: $font-inter;
+    height: f.toRem(35);
+    line-height: f.toRem(19);
+    font-weight: 700;
+    margin-block: f.toRem(12);
+    width: 100%;
+    padding: f.toRem(8);
+    border-radius: 6px;
+
+    svg {
+        width: fit-content;
+    }
+  }
+
+  .list {
+    display: grid;
+    gap: f.toRem(32);
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .featured {
+    grid-row-start: 5;
+  }
+
+  .nearyou {
+    grid-row-start: 10;
+  }
+}
