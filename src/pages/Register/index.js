@@ -25,7 +25,7 @@ export default function Register() {
   return (
     <div className={container}>
       <div className={logoAndTitleContainer}>
-        <Image src={Logo} className={signInLogoSized} />
+        <Image alt="" src={Logo} className={signInLogoSized} />
         <h4 className={signInTitleBold}>REGISTRO</h4>
       </div>
       <div className={signInFastContainer}>
