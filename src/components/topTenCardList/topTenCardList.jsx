@@ -11,8 +11,6 @@ function TopTenCardList() {
       const response = await axios
         .get("https://inclusive-001-site1.atempurl.com/api/establishment")
         .then((res) => res);
-
-      console.log(response.data);
       return response.data;
     },
   });
