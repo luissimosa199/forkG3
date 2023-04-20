@@ -53,7 +53,7 @@ const schema = yup
   })
   .required();
 
-export default function register() {
+export default function Register() {
   const router = useRouter();
 
   const [passwordImage, setPasswordImage] = useState({
