@@ -7,6 +7,7 @@ function Category(props) {
   const places = props?.category?.establishments;
 
   const isHighWidth = useHighWidth()
+  console.log(isHighWidth)
 
   return (
     <div className={styles.container}>
