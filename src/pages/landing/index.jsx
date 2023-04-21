@@ -9,8 +9,11 @@ import Img4 from "../../../public/img/landing/landing-img-4.png";
 import SearchLogo from "@/components/searchLogo/searchLogo";
 import RightArrowLogo from "@/components/rightArrowLogo/rightArrowLogo";
 import TopTenCardList from "@/components/topTenCardList/topTenCardList";
+import { useRouter } from "next/router";
 
 function Landing() {
+  const router = useRouter();
+  
   return (
     <div>
       <header className={styles.header}>
@@ -30,13 +33,13 @@ function Landing() {
               <Link href="/">Categorias de lugares</Link>
             </li>
             <li>
-              <Link href="/">Quienes somos</Link>
+              <Link href="/somos">Quienes somos</Link>
             </li>
             <li>
               <Link href="/contact">Contacto</Link>
             </li>
             <li>
-              <Link href="/faq">Preguntas Frecuentes</Link>
+              <Link href="/frequent">Preguntas Frecuentes</Link>
             </li>
           </ul>
         </nav>
@@ -52,7 +55,14 @@ function Landing() {
             priority
           />
           <div className={styles.form}>
-            <input type="text" placeholder="Buscar lugares accesibles" />
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                router.push(`/search?term=${e.target[0].value}`);
+              }}
+            >
+              <input type="text" placeholder="Buscar lugares accesibles" />
+            </form>
             <SearchLogo />
           </div>
 
@@ -148,7 +158,7 @@ function Landing() {
             evaluar su accesibilidad y colaborar con la comunidad.
           </p>
           <button>
-            <Link href="/faq">Explorar</Link>
+            <Link href="/frequent">Explorar</Link>
           </button>
         </section>
       </div>

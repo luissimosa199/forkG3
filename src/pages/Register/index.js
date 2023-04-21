@@ -11,9 +11,8 @@ import AppleButton from "@/components/Buttons/AppleButton";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import Link from "next/link";
 import { useRouter } from "next/router";
-import { userAgent } from "next/server";
+
 
 const {
   container,
@@ -121,7 +120,7 @@ export default function Register() {
   return (
     <div className={container}>
       <div className={logoAndTitleContainer}>
-        <Image src={Logo} className={signInLogoSized} alt="" />
+        <Image src={Logo} className={signInLogoSized} alt="Logo" />
         <h4 className={signInTitleBold}>REGISTRO</h4>
       </div>
       <div className={signInFastContainer}>
