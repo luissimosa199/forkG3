@@ -1,7 +1,5 @@
-export default function RegisterOwner({
-  handleNextStep,
-  establishment,
-  setEstablishment,
-}) {
-  return <h1>Register Owner</h1>;
+function RegisterOwner() {
+    return ( <h1>Register Owner</h1> );
 }
+
+export default RegisterOwner;
