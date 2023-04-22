@@ -239,7 +239,6 @@
 
   img {
     z-index: 0;
-    margin: 0 auto;
   }
 
   .explore_text {
@@ -247,10 +246,9 @@
     z-index: 1;
     bottom: 0;
     display: flex;
-    justify-content: space-around;
-    text-align: center;
-    padding-inline: f.toRem(100);
+    padding-inline: f.toRem(24);
     width: 100%;
+    justify-content: space-between;
     margin-bottom: f.toRem(31);
 
     h2 {
@@ -287,7 +285,6 @@
       margin: 5rem auto;
       width: fit-content;
       gap: 2rem;
-      padding-inline: f.toRem(120);
     }
   }
 }
